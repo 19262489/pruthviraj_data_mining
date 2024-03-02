@@ -46,5 +46,6 @@ require_packages(c("httr", "xml2", "tidyverse", "tidytext", "syuzhet","lubridate
                  #Data <- paste0("sentiment_summary_", current_datetime, ".txt")
                  #sink(file = Data)
                  #print(summary_stats)
-                 #sink()  # Close the connection to the file
+                 #sink()  
+# Close the connection to the file
 summary_stats | > writeLines(format(Sys.Date(), ""%Y-%m-%d_%H-%M-%S.txt"))
