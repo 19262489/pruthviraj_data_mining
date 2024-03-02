@@ -1,5 +1,5 @@
 source("require_packages.R")
-require_packages(c("httr", "xml2", "tidyverse", "tidytext", "syuzhet","lubridate"
+require_packages(c("httr", "xml2", "tidyverse", "tidytext", "syuzhet","lubridate", "readr"
 ))
 
 
