@@ -1,3 +1,14 @@
+source("require_packages.R")
+
+require_packages <- function(packages) {
+  for (pkg in packages) {
+    if (!require(pkg, character.only = TRUE)) {
+      install.packages(pkg, dependencies = TRUE)
+      library(pkg, character.only = TRUE)
+    }
+  }
+}
+
 require_packages(c("httr", "xml2", "tidyverse", "tidytext", "syuzhet", "lubridate", "readr"))
 
 # 1. HTTP GET Request to the CNN RSS feed URL
