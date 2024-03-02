@@ -39,12 +39,12 @@ require_packages(c("httr", "xml2", "tidyverse", "tidytext", "syuzhet","lubridate
                  
                  
                  # Print summary statistics
-                 print(summary_stats)
+                 #print(summary_stats)
 
 # Print summary statistics and save to a timestamped file
-                 current_datetime <- format(now(), "%Y-%m-%d_%H-%M-%S")
-                 Data <- paste0("sentiment_summary_", current_datetime, ".txt")
-                 sink(file = Data)
-                 print(summary_stats)
-                 sink()  # Close the connection to the file
-#forks_counter |>  as.character() |> paste(Sys.time()) |> writeLines(format(Sys.Date(), "%m-%Y.txt"))
+                # current_datetime <- format(now(), "%Y-%m-%d_%H-%M-%S")
+                 #Data <- paste0("sentiment_summary_", current_datetime, ".txt")
+                 #sink(file = Data)
+                 #print(summary_stats)
+                 #sink()  # Close the connection to the file
+summary_stats | > writeLines(format(Sys.Date(), ""%Y-%m-%d_%H-%M-%S.txt"))
