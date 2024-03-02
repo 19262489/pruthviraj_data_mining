@@ -48,4 +48,4 @@ require_packages(c("httr", "xml2", "tidyverse", "tidytext", "syuzhet","lubridate
                  #print(summary_stats)
                  #sink()  
 # Close the connection to the file
-summary_stats | > writeLines(format(Sys.Date(), ""%Y-%m-%d_%H-%M-%S.txt"))
+summary_stats |  writeLines(format(Sys.Date(), ""%Y-%m-%d_%H-%M-%S.txt"))
