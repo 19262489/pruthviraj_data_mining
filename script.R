@@ -1,7 +1,6 @@
 source("require_packages.R")
 require_packages(c("httr", "xml2", "dplyr","stringr","readr", "tidyr", "syuzhet","lubridate")
 
-
 RSS_URL <- "http://rss.cnn.com/rss/cnn_latest.rss."
                  CNN <- GET(RSS_URL)
                  
@@ -31,7 +30,7 @@ RSS_URL <- "http://rss.cnn.com/rss/cnn_latest.rss."
                              max_sentiment = max(sentiment))
                  
                  
-                 ###print(summary_stats)
+                 print(summary_stats)
                  
                  
                 current_datetime <- format(now(), "%Y-%m-%d_%H-%M-%S")
@@ -39,6 +38,5 @@ RSS_URL <- "http://rss.cnn.com/rss/cnn_latest.rss."
                 sink(file = Data)
                 print(summary_stats)
                 sink() 
-                 
                  
                  
