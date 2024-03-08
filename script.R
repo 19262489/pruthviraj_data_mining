@@ -10,7 +10,7 @@ require_packages <- function(packages) {
 }
 
 # Load required packages
-require_packages(c("httr", "xml2", "tidyverse", "tidytext", "syuzhet", "lubridate"))
+require_packages(c("httr", "xml2", "tidyr", "tidytext", "syuzhet", "lubridate"))
 
 # Perform HTTP GET Request to the CNN RSS feed URL
 RSS_URL <- "http://rss.cnn.com/rss/cnn_latest.rss"
